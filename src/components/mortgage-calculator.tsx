@@ -17,9 +17,9 @@ export default function MortgageCalculator() {
   const [payingYears, setPayingYears] = useState(0);
   const [monthlyPayment, setMonthlyPayment] = useState<number|string>("");
 
-  const handleLoanAmount = (event) => { setLoanAmount(event.target.valueAsNumber) }
-  const handleMortgageRate = (event) => { setMortgageRate(event.target.valueAsNumber) }
-  const handlePayingYears = (event) => { setPayingYears(event.target.valueAsNumber) }
+  const handleLoanAmount = (event:any) => { setLoanAmount(event.target.valueAsNumber) }
+  const handleMortgageRate = (event:any) => { setMortgageRate(event.target.valueAsNumber) }
+  const handlePayingYears = (event:any) => { setPayingYears(event.target.valueAsNumber) }
 
   useEffect(() => {
     if ([loanAmount, mortgageRate, payingYears].some( element => isNaN(element))) {
